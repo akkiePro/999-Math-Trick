@@ -1,0 +1,15 @@
+input:valid {
+	color: green;
+}
+
+input:invalid {
+	color: red;
+}
+
+input[type=number] {
+	width: 200px;
+	text-align: right;
+}
+label {
+	text-align: right;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        input:valid {
+            color: green;
+        }
+
+        input:invalid {
+            color: red;
+        }
+
+        input[type=number] {
+            width: 150px;
+            text-align: right;
+        }
+    </style>
+    <script>
+        function f1() {
+            num1 = document.getElementById("num1").value;
+            document.write(num1);
+        }
+        function inputfn() {
+            var x = document.getElementsByTagName("input");
+            for (var i = 0; i < x.length; i++)
+                if (x[i].value.length > 3) {
+                    x.value = x[i].value.slice(0, 3);
+                    document.getElementsByTagName("input")[i].value = x.value;
+                }
+        }
+        function clickfn() {
+            var y = 0;
+            var x = document.getElementById("input1").value;
+            var ans = document.getElementById("ans");
+            if (x.length == 0) {
+                alert("Enter first number");
+                ans.innerHTML = "Answer will be provided";
+            }
+            else if (x == 0 || x == 00 || x == 000) {
+                ans.innerHTML = "1998";
+            }
+            else if (x == 1 || x == 01 || x == 001) {
+                ans.innerHTML = "1999";
+            }
+            else {
+                y = x - 2;
+                z = y.toString();
+                ans.innerHTML = 2 + z;
+            }
+        }
+        function clickfn2() {
+            var x = document.getElementById("input2").value;
+            if (x.length == 0) {
+                alert("Enter second number");
+                document.getElementById("l1").innerHTML = "Next number will be provided";
+            }
+            else {
+                var temp = 999 - x;
+                var temp2 = temp.toString();
+                var str = "00";
+                if (temp.length == 1) {
+                    document.getElementById("l1").innerHTML = str + temp2;
+                }
+                else
+                    document.getElementById("l1").innerHTML = 999 - x;
+            }
+        }
+        function keyupfn() {
+            var x = document.getElementById("input3").value;
+            if (x.length == 3) {
+                document.getElementById("l2").innerHTML = 999 - x;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" name="input" id="input1" placeholder="enter 1st number" oninput="inputfn()" min="0"
+        max="999" /><br>
+    <input type="number" name="input" id="input2" placeholder="enter 2nd number" oninput="inputfn()" onclick="clickfn()"
+        min="0" max="999" /><br>
+    <label for="" id="l1">Next number will be provided</label><br>
+    <input type="number" name="input" id="input3" placeholder="enter 3rd number" oninput="inputfn()"
+        onclick="clickfn2()" onkeyup="keyupfn()" min="0" max="999" /><br>
+    <label for="" id="l2">Next number will be provided</label><br>
+    <label for="" id="ans">Answer will be provided</label><br>
+</body>
+
+</html>

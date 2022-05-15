@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="flatly.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid" id="wrapper">
+
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="content">
+                <h2>AI Mini Project</h2>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="number" class="form-control" aria-label="Todo" aria-describedby="add-btn"
+                            required="" id="input1" placeholder="enter 1st number" oninput="inputfn()" min="0" max="999"
+                            style="width: 400px;" /><br>
+
+
+
+                        +<input type="number" class="form-control" aria-label="Todo" aria-describedby="add-btn"
+                            required="" id="input2" placeholder="enter 2nd number" oninput="inputfn()"
+                            onclick="clickfn()" onkeyup="clickfn()" min="0" max="999" /><br>
+
+                        +<label for="" id="l1">Next number will be provided</label><br>
+
+                        +<input type="number" class="form-control" aria-label="Todo" aria-describedby="add-btn"
+                            required="" id="input3" placeholder="enter 3rd number" oninput="inputfn()"
+                            onclick="clickfn2()" onkeyup="keyupfn()" onkeydown="clickfn2()" min="0" max="999" /><br>
+
+                        +<label for="" id="l2" style="text-align: right; display: inline-block;">Next number will be
+                            provided</label><br>
+                        =<label for="" id="ans">Answer will be provided</label><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="row pad">
+                <div class="col-lg-12 text-center">
+                    <strong>Number prediction App</strong>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="./bs/js/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="./bs/js/bootstrap.min.js"></script>
+</body>
+
+</html>
